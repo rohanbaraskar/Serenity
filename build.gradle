@@ -1,3 +1,31 @@
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.0.24")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+dependencies {
+    compile 'net.serenity-bdd:core:1.0.24'
+    compile 'net.serenity-bdd:serenity-jbehave:1.0.11'
+    testCompile('junit:junit:4.11')
+    compile('org.assertj:assertj-core:1.7.0')
+    compile('com.googlecode.lambdaj:lambdaj:2.3.3')
+}
+gradle.startParameter.continueOnFailure = true
 apply plugin: 'maven'
 apply plugin: 'java'
 apply plugin: 'idea'
@@ -9,9 +37,9 @@ targetCompatibility = 1.8
 version = '1.0'
 
 repositories {
+    jcenter()
     mavenLocal()
     mavenCentral()
-    jcenter()
 }
 
 buildscript {
@@ -48,13 +76,20 @@ dependencies {
     }
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.3'
     compile 'com.google.guava:guava:18.0'
-    testCompile 'net.serenity-bdd:core:1.0.47'
-    testCompile 'net.serenity-bdd:serenity-junit:1.0.47'
+    compile group: 'net.serenity-bdd', name: 'serenity-gradle-plugin', version: '1.0.47'
+    compile group: 'net.serenity-bdd', name: 'serenity-test-utils', version: '1.0.47'
+    compile group: 'net.serenity-bdd', name: 'serenity-jbehave', version: '1.0.21'
+    compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.0.15'
+    compile group: 'net.serenity-bdd', name: 'serenity-browsermob-plugin', version: '1.0.25'
+    compile 'net.serenity-bdd:core:1.0.47'
+    compile 'net.serenity-bdd:serenity-junit:1.0.47'
     testCompile('junit:junit:4.11')
-    testCompile('org.assertj:assertj-core:1.7.0')
-    testCompile('org.slf4j:slf4j-simple:1.7.7')
+    compile('org.assertj:assertj-core:1.7.0')
+    compile('org.slf4j:slf4j-simple:1.7.7')
+    compile('com.googlecode.lambdaj:lambdaj:2.3.3')
 }
 
+gradle.startParameter.continueOnFailure = true
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
