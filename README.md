@@ -1,5 +1,16 @@
-Serenity BDD
+Serenity BDD Framework
 =======
+
+- **[Serenity BDD : ](https://github.com/serenity-bdd)**
+  - [Serenity BDD Documentation](https://github.com/serenity-bdd/serenity-documentation)
+  - [Serenity Core](https://github.com/serenity-bdd/serenity-core)
+  - [Serenity Cucumber Integration](https://github.com/serenity-bdd/serenity-cucumber)
+  - [Serenity JBehave Integration](https://github.com/serenity-bdd/serenity-jbehave)
+  - [Serenity Maven Archetypes](https://github.com/serenity-bdd/serenity-maven-archetypes)
+  - [Serenity Maven Plugin](https://github.com/serenity-bdd/serenity-maven-plugin)
+  - [Serenity JIRA](https://github.com/serenity-bdd/serenity-jira)
+
+--
 
 This repository contains sample codes from various books, and project.
 
