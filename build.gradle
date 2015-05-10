@@ -85,7 +85,6 @@ dependencies {
     compile 'net.serenity-bdd:serenity-junit:1.0.47'
     testCompile('junit:junit:4.11')
     compile('org.assertj:assertj-core:1.7.0')
-    compile('org.slf4j:slf4j-simple:1.7.7')
     compile('com.googlecode.lambdaj:lambdaj:2.3.3')
 }
 
